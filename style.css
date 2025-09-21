@@ -1,0 +1,53 @@
+  body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 165px;
+  }
+
+  img {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  #links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #email {
+    text-align: center;
+  }
+
+  a {
+    color: #0366d6;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  #profile{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }

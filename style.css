@@ -99,6 +99,11 @@ a:hover {
     font-size: 0.9rem;
     word-break: break-word;
   }
+
+  img {
+    width: clamp(280px, 90%, 400px);  /* Increased from 40% to 90% width */
+    margin: 1.5rem auto;              /* Adjusted margins */
+  }
 }
 
 /* Extra small devices */
@@ -111,5 +116,9 @@ a:hover {
   #links span {
     display: inline-block;
     padding: 5px 0;
+  }
+
+  img {
+    width: 95%;  /* Even larger for very small screens */
   }
 }

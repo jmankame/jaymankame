@@ -1,57 +1,115 @@
-  body {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-  }
+body {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-width: 320px;
+  min-height: 100vh;       /* Make body fill the full screen height */
+  display: flex;           /* Enable flexbox */
+  flex-direction: column;  /* Stack content vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
+  overflow-x: hidden;
+}
 
-  h1 {
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.4;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin-top: 165px;
+h1 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.4;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: clamp(300px, 40%, 600px);
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+#links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#email {
+  text-align: center;
+}
+
+a {
+  color: #0366d6;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#number {
+  font-size: 15px;
+}
+
+/* Updated media queries */
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 0 15px;
   }
 
   img {
-    width: 40%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: clamp(250px, 50%, 500px);
   }
+}
 
-
+@media screen and (max-width: 768px) {
   #links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0 10px;
   }
 
+  #links a {
+    margin: 0 8px;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  #links {
+    gap: 0.8rem;
+  }
+
+  #number,
   #email {
-    text-align: center;
+    font-size: 0.9rem;
+    word-break: break-word;
   }
+}
 
-  a {
-    color: #0366d6;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  #profile{
-    display: flex;
-    justify-content: center;
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  #links {
     flex-direction: column;
+    gap: 1rem;
   }
 
- #number{
-    font-size: 15px;
+  #links span {
+    display: inline-block;
+    padding: 5px 0;
   }
+}
